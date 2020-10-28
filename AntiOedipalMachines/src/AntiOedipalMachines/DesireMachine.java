@@ -1,16 +1,22 @@
 package AntiOedipalMachines;
 
 public class DesireMachine extends Machine {
-  int productivity;
 
-  public DesireMachine() {
-    productivity = 20;
+  public DesireMachine(String name) {
+    // just give me some standard machine
+    super(name);
   }
 
-  public DesireMachine(int prod) {
-    if (prod < 0 || prod > 100) {
-      throw new IllegalArgumentException(prod + " is out of range");
-    }
-    productivity = prod;
+  public DesireMachine(String name, int prod) {
+    super(name, prod);
   }
+
+  public DesireMachine(String name, int prod, boolean start) {
+    super(name, prod, start);
+    System.out.println("in here");
+  }
+
+  // public void start() {
+  // super();
+  // }
 }
